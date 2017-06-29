@@ -74,7 +74,7 @@ var ParallaxEffect = function () {
         var screenTop = thisEle.parentElement.getBoundingClientRect().top;
         var top = screenTop + this.getScrollTop();
         thisEle.style.top = -(top / ratio) + "px";
-        thisEle.style.height = 100 * (1 + 1 / ratio) + "%";
+        thisEle.style.height = "100%";
       }
     }
 
@@ -154,7 +154,7 @@ var ParallaxEffect = function () {
 
       for (var _i = 0; _i < this.parallaxElements.length; _i++) {
         this.parallaxElements[_i].style.opacity = 1;
-        this.parallaxElements[_i].style.transform = "translateY(" + this.scrollTop / 3 + "px)";
+        this.parallaxElements[_i].style.transform = "translateY(" + this.scrollTop / this.pRatio + "px)";
       }
       return true;
     }
@@ -202,10 +202,6 @@ var ParallaxEffect = function () {
 
     window.addEventListener("mousewheel", this.scrollReplace.bind(this)); // Add mousewheel listener
     window.addEventListener("wheel", this.scrollReplace.bind(this)); // Add wheel listener
-    window.addEventListener("touchmove", function (e) {
-      console.log(e.changedTouches, e);
-      // this.scrollReplace(e);
-    }); // Add touchmove listener
 
     window.addEventListener("optimizedScroll", function (event) {
       if (_this.lastScrollSimulated) {
@@ -235,7 +231,7 @@ var ParallaxEffect = function () {
   */
 
   // Initialize the parallax effect:
-  window.parallaxEffect = new ParallaxEffect("parallax-moving", 3, 767);
+  window.parallaxEffect = new ParallaxEffect("parallax-moving", 2, 767);
 })();
 
 },{"babel-runtime/helpers/classCallCheck":3,"babel-runtime/helpers/createClass":4}],2:[function(require,module,exports){

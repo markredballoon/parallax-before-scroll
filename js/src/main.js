@@ -59,7 +59,7 @@ class ParallaxEffect {
       const screenTop = thisEle.parentElement.getBoundingClientRect().top;
       const top = screenTop + this.getScrollTop();
       thisEle.style.top = -(top / ratio) + "px";
-      thisEle.style.height = 100 * (1 + 1 / ratio) + "%";
+      thisEle.style.height = "100%";
     }
   }
 
@@ -134,7 +134,7 @@ class ParallaxEffect {
     for (let i = 0; i < this.parallaxElements.length; i++) {
       this.parallaxElements[i].style.opacity = 1;
       this.parallaxElements[i].style.transform =
-        "translateY(" + this.scrollTop / 3 + "px)";
+        "translateY(" + this.scrollTop / this.pRatio + "px)";
     }
     return true;
   }
@@ -203,5 +203,5 @@ class ParallaxEffect {
   */
 
   // Initialize the parallax effect:
-  window.parallaxEffect = new ParallaxEffect("parallax-moving", 3, 767);
+  window.parallaxEffect = new ParallaxEffect("parallax-moving", 2, 767);
 })();
