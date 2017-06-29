@@ -202,7 +202,10 @@ var ParallaxEffect = function () {
 
     window.addEventListener("mousewheel", this.scrollReplace.bind(this)); // Add mousewheel listener
     window.addEventListener("wheel", this.scrollReplace.bind(this)); // Add wheel listener
-    window.addEventListener("touchmove", this.scrollReplace.bind(this)); // Add touchmove listener
+    window.addEventListener("touchmove", function (e) {
+      console.log(e.changedTouches, e);
+      // this.scrollReplace(e);
+    }); // Add touchmove listener
 
     window.addEventListener("optimizedScroll", function (event) {
       if (_this.lastScrollSimulated) {

@@ -176,7 +176,6 @@ class ParallaxEffect {
 
     window.addEventListener("mousewheel", this.scrollReplace.bind(this)); // Add mousewheel listener
     window.addEventListener("wheel", this.scrollReplace.bind(this)); // Add wheel listener
-    window.addEventListener("touchmove", this.scrollReplace.bind(this)); // Add touchmove listener
 
     window.addEventListener("optimizedScroll", event => {
       if (this.lastScrollSimulated) {
