@@ -149,7 +149,6 @@ class ParallaxEffect {
       document.documentElement.clientHeight;
     this.positionParllaxElements(this.parallaxElements, this.pRatio);
     this.responsive = window.innerWidth < this.breakpoint;
-    console.log(this.scrollTop, this.scrollHeight, this.responsive);
   }
 
   /**
