@@ -12,6 +12,7 @@ body {
   background: #fff;
 }
 
+
 h1 {
   font-size: 3rem;
   color: #eee;
@@ -22,6 +23,7 @@ h1 {
 .container{
     width: 1000px;
     max-width: 100%;
+    background: #fff;
     margin: 20px auto;
 }
 
@@ -60,13 +62,13 @@ ul{
     top: 0;
     height: 100%;
     background-color: #d4e9f5;
-    background-image: url(http://www.philarmitage.net/alaska/toklat_valley.jpg);
     background-size: cover;
   }
   .container {
     height: 100%;
     position: relative;
     z-index: 2;
+    background: none;
   }
 }
 
@@ -83,11 +85,9 @@ ul{
 
 .item {
   height: 650px;
-  background: green;
+  background: #fff;
+  border-left: 3px solid green;
   width: 100%;
-  ~ .item {
-    background: blue;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -98,8 +98,6 @@ ul{
     position: relative;
     z-index: 1;
     width: 100%;
-    background: #fff;
-    border-left: 30px solid green;
     height: 100vh;
   }
   .parallax-wrap {

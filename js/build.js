@@ -221,15 +221,6 @@ var ParallaxEffect = function () {
 }();
 
 (function () {
-  // For testing:
-  window.addEventListener('scroll', function (event) {
-    document.getElementById("checkScroll").innerHTML = window.pageYOffset;
-  });
-  // For testing:
-  window.addEventListener('touchmove', function (event) {
-    document.getElementById("checkScroll").innerHTML = window.pageYOffset;
-  });
-
   // Initialize the parallax effect:
   window.parallaxEffect = new ParallaxEffect("parallax-moving", 3, 767);
 })();
