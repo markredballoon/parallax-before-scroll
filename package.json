@@ -1,13 +1,13 @@
 {
-  "name": "websitetemplate",
+  "name": "rbparallax",
   "version": "2.0.0",
-  "description": "A template for developing sites with",
+  "description": "Another parallax effect",
   "main": "gruntfile.js",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "watchify -vd -p browserify-hmr -e scripts/src/main.js -o scripts/build.js",
-    "build": "NODE_ENV=production browserify -g envify -e scripts/src/main.js | uglifyjs -c -m > scripts/build.js"
+    "dev": "watchify -vd -p browserify-hmr -e js/src/main.js -o js/build.js",
+    "build": "NODE_ENV=production browserify -g envify -e js/src/main.js | uglifyjs -c -m > js/build.js"
   },
   "repository": {
     "type": "git",
