@@ -105,7 +105,6 @@ class ParallaxEffect {
 
       this.scrollHandler();
       window.scrollBy(0, event.deltaY);
-
       return false;
     }
   }
